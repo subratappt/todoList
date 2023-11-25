@@ -1,0 +1,160 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(34, 44, 49);
+    padding: 10px;
+}
+
+.todo-box {
+    width: 100%;
+    max-width: 720px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 4px 40px 70px;
+    border-radius: 10px;
+}
+
+.todo-box h2 {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dedede;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    background: rgb(47, 82, 15);
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+button:hover {
+    background: rgb(92, 127, 62);
+}
+
+ul {
+    padding-left: 10px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 22px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: " ";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 2px solid #827e7e;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: rgb(149, 88, 81);
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    border: 2px solid rgb(92, 160, 28);
+    background-color: rgb(92, 160, 28);
+    text-decoration: line-through;
+}
+
+.cross-button {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.cross-button:hover {
+    background: #a5a0a0;
+}
+
+#downloadButton,
+#uploadInput {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(51, 69, 78);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+#downloadButton:hover,
+#uploadInput:hover {
+    background-color: rgb(64, 97, 114);
+}
+
+.downup {
+    /* width: 500px; */
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    /* Optional: change the background color of the button container */
+}
+
+.swal2-popup {
+    font-size: 1.2rem !important;
+    width: auto !important;
+}
