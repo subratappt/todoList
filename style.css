@@ -158,3 +158,26 @@ ul li.checked::before {
     font-size: 1.2rem !important;
     width: auto !important;
 }
+
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.tag-today {
+    color: blue;
+}
+
+.tag-pending {
+    color: orange;
+}
+
+.tag-completed {
+    color: green;
+}
