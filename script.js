@@ -1,5 +1,5 @@
 const inputBox = document.getElementById("input-box");
-const listContainer = document.getElementById("list-container");
+const listContainer = document.getElementById("today-container");
 
 // Function to add an element from input box to the list container
 function addElementFromInput() {
