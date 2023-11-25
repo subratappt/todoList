@@ -124,21 +124,3 @@ function uploadTodoList(event) {
 // Add event listeners to your download and upload buttons
 document.querySelector('#downloadButton').addEventListener('click', downloadTodoList);
 document.querySelector('#uploadInput').addEventListener('change', uploadTodoList);
-
-document.addEventListener('click', function (event) {
-    if (event.target.matches('.tag-button')) {
-        const listItem = event.target.closest('li');
-        const tag = event.target.textContent;
-
-        listItem.remove(); // Remove the list item from its current location
-
-        // Add the list item to the corresponding container
-        if (tag === 'Today') {
-            document.querySelector('#todayTasks').appendChild(listItem);
-        } else if (tag === 'Pending') {
-            document.querySelector('#pendingTasks').appendChild(listItem);
-        } else if (tag === 'Complete') {
-            document.querySelector('#completeTasks').appendChild(listItem);
-        }
-    }
-}, false);
