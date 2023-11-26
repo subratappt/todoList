@@ -14,22 +14,39 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background: rgb(34, 44, 49);
+
 }
 
 .container {
     width: 100%;
-    min-height: 100vh;
-    background: rgb(34, 44, 49);
-    padding: 10px;
+    max-height: 100vh;
+    /* This will make the container's height equal to the viewport's height */
+    overflow-y: auto;
+    /* This will make the container scrollable */
+    /* background: rgb(34, 44, 49); */
+    /* scroll-behavior: smooth; */
 }
 
 .todo-box {
     width: 100%;
     max-width: 720px;
-    background: #fff;
-    margin: 100px auto 20px;
+    background: #f0f0f0;
+    margin: 20px auto 20px;
     padding: 4px 40px 70px;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Add the 'inset' keyword */
+    /* Add this line */
+}
+
+.todo-box-title {
+    padding: 10px 0px 10px 0px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Add this line */
 }
 
 .todo-box h2 {
@@ -40,35 +57,59 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #dedede;
+    background: #ffffff;
     border-radius: 30px;
     padding-left: 20px;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 
 }
 
-input {
+.todo-input-box {
+    flex: 1;
     flex: 1;
     border: none;
     outline: none;
-    background: transparent;
+    width: 50%;
+    max-width: 500px;
     padding: 10px;
-    font-weight: 14px;
+    border-radius: 20px;
+    margin: 10px auto;
+    /* This will center the input box */
+    font-size: 18px;
+    text-align: center;
+    background-color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
 }
 
-button {
+.input-group {
+    position: relative;
+    max-width: 600px;
+    margin: 10px auto;
+    flex: 1;
     border: none;
     outline: none;
-    padding: 16px 40px;
+    font-weight: 14px;
+    text-align: center;
+    color: white;
+}
+
+
+.submit-btn {
+    border: none;
+    outline: none;
+    padding: 16px 20px;
     background: rgb(47, 82, 15);
     color: #ffffff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    margin-right: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background: rgb(92, 127, 62);
+    background: rgb(105, 17, 17);
 }
 
 ul {
@@ -77,7 +118,7 @@ ul {
 
 ul li {
     list-style: none;
-    font-size: 22px;
+    font-size: 24px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
@@ -91,9 +132,18 @@ ul li::before {
     width: 18px;
     border-radius: 50%;
     border: 2px solid #827e7e;
-    top: 12px;
-    left: 8px;
+    top: 15px;
+    left: 15px;
+    /* vertical-align: text-bottom; */
 }
+
+ul li:hover {
+    background-color: rgba(141, 140, 144, 0.1);
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Add this line */
+}
+
 
 ul li.checked {
     color: rgb(149, 88, 81);
@@ -107,37 +157,55 @@ ul li.checked::before {
 }
 
 .cross-button {
-    position: absolute;
+    /* position: relative; */
     right: 0;
     top: 0px;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 20px;
     text-align: center;
-    border-radius: 40px;
+    border-radius: 20px;
+    float: right;
 }
 
 .cross-button:hover {
-    background: #a5a0a0;
+    background: #b90d0d;
+    color: #ffffff;
 }
 
-#downloadButton,
-#uploadInput {
-    padding: 10px 20px;
+#downloadButton {
+    padding: 10px 10px;
     font-size: 16px;
     color: #fff;
-    background-color: rgb(51, 69, 78);
+    /* background-color: rgb(51, 69, 78); */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 10px;
+    /* margin-bottom: 50px; */
     transition: background-color 0.3s ease;
 }
 
-#downloadButton:hover,
-#uploadInput:hover {
-    background-color: rgb(64, 97, 114);
+#downloadButton:hover {
+    color: #1e00ff;
+    background-color: rgb(104, 98, 97);
+}
+
+.uploadButton {
+    padding: 10px 10px;
+    font-size: 16px;
+    color: #fff;
+    /* background-color: rgb(51, 69, 78); */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin: 0 10px; */
+    transition: background-color 0.3s ease;
+}
+
+.uploadButton:hover {
+    background-color: rgb(104, 98, 97);
+    color: #2fff00;
 }
 
 .downup {
@@ -162,22 +230,120 @@ ul li.checked::before {
 .tag {
     display: inline-block;
     background-color: #f0f0f0;
-    padding: 5px;
+    padding: 3px;
     margin: 5px;
     cursor: pointer;
     border: 1px solid black;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 1500;
+    vertical-align: middle;
 }
 
 .tag-today {
     color: blue;
+    /* border: 1px solid rgb(64, 15, 154); */
+    background-color: rgba(64, 15, 154, 0.143);
+    border: none;
 }
 
 .tag-pending {
-    color: orange;
+    color: rgb(188, 128, 16);
+    background-color: rgba(231, 189, 61, 0.389);
+    border: none;
 }
 
 .tag-completed {
+    background-color: rgb(3, 94, 5, 0.143);
     color: green;
+    border: none;
+}
+
+.icon-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+
+
+
+.icon-container i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .icon-container {
+        position: static;
+        text-align: center;
+    }
+}
+
+.msg {
+    width: 100%;
+    height: 45px;
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 5px;
+    color: #ffffff9f;
+    margin-left: auto;
+    /* Add this line */
+    margin-right: auto;
+    /* Add this line */
+}
+
+.quote-box {
+    max-width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    /* padding: 5px;
+    border: #7e76be 2px solid;
+    border-radius: 20px; */
+}
+
+#date {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (max-width: 600px) {
+    .todo-box {
+        max-width: 100%;
+        /* Add padding */
+        margin: 10px auto;
+        /* Center the box */
+    }
+
+    .msg {
+        flex-direction: column;
+        align-self: center;
+        height: 100px;
+    }
+
+    #date {
+        align-self: center;
+        margin-top: 10px;
+    }
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+    /* background-color: #f0f0f0; */
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff9f;
 }
