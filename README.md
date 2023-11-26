@@ -1,2 +1,2 @@
-#TodoList
+# todoList
 ![Screenshot](screenshot.png)
