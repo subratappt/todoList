@@ -145,7 +145,7 @@ function handleElementClick(event) {
         // Show a confirmation dialog before deleting the item
         Swal.fire({
             title: "Confirmation",
-            text: "Are you sure you want to delete this item?",
+            text: "Are you sure you want to delete this task?",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
