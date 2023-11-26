@@ -1,31 +1,22 @@
-/* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 html {
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
 }
 
 body {
     margin: 0;
     padding: 0;
     background: rgb(34, 44, 49);
-
 }
 
 .container {
     width: 100%;
     max-height: 100vh;
-    /* This will make the container's height equal to the viewport's height */
     overflow-y: auto;
-    /* This will make the container scrollable */
-    /* background: rgb(34, 44, 49); */
-    /* scroll-behavior: smooth; */
 }
 
 .todo-box {
@@ -36,8 +27,6 @@ body {
     padding: 4px 40px 70px;
     border-radius: 15px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
-    /* Add the 'inset' keyword */
-    /* Add this line */
 }
 
 .todo-box-title {
@@ -46,7 +35,6 @@ body {
     font-size: 24px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    /* Add this line */
 }
 
 .todo-box h2 {
@@ -60,12 +48,9 @@ body {
     background: #ffffff;
     border-radius: 30px;
     padding-left: 20px;
-    /* margin-bottom: 25px; */
-
 }
 
 .todo-input-box {
-    flex: 1;
     flex: 1;
     border: none;
     outline: none;
@@ -74,12 +59,10 @@ body {
     padding: 10px;
     border-radius: 20px;
     margin: 10px auto;
-    /* This will center the input box */
     font-size: 18px;
     text-align: center;
     background-color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
 }
 
 .input-group {
@@ -93,7 +76,6 @@ body {
     text-align: center;
     color: white;
 }
-
 
 .submit-btn {
     border: none;
@@ -134,16 +116,13 @@ ul li::before {
     border: 2px solid #827e7e;
     top: 15px;
     left: 15px;
-    /* vertical-align: text-bottom; */
 }
 
 ul li:hover {
     background-color: rgba(141, 140, 144, 0.1);
     border-radius: 40px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    /* Add this line */
 }
-
 
 ul li.checked {
     color: rgb(149, 88, 81);
@@ -157,7 +136,6 @@ ul li.checked::before {
 }
 
 .cross-button {
-    /* position: relative; */
     right: 0;
     top: 0px;
     width: 20px;
@@ -178,12 +156,9 @@ ul li.checked::before {
     padding: 10px 10px;
     font-size: 16px;
     color: #fff;
-    /* background-color: rgb(51, 69, 78); */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* margin-bottom: 50px; */
-    transition: background-color 0.3s ease;
 }
 
 #downloadButton:hover {
@@ -195,11 +170,9 @@ ul li.checked::before {
     padding: 10px 10px;
     font-size: 16px;
     color: #fff;
-    /* background-color: rgb(51, 69, 78); */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* margin: 0 10px; */
     transition: background-color 0.3s ease;
 }
 
@@ -209,7 +182,6 @@ ul li.checked::before {
 }
 
 .downup {
-    /* width: 500px; */
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -219,7 +191,6 @@ ul li.checked::before {
     align-items: center;
     padding: 10px;
     margin: 0 auto;
-    /* Optional: change the background color of the button container */
 }
 
 .swal2-popup {
@@ -242,7 +213,6 @@ ul li.checked::before {
 
 .tag-today {
     color: blue;
-    /* border: 1px solid rgb(64, 15, 154); */
     background-color: rgba(64, 15, 154, 0.143);
     border: none;
 }
@@ -265,8 +235,6 @@ ul li.checked::before {
     right: 10px;
     color: white;
 }
-
-
 
 .icon-container i {
     margin-left: 10px;
@@ -291,9 +259,7 @@ ul li.checked::before {
     padding: 5px;
     color: #ffffff9f;
     margin-left: auto;
-    /* Add this line */
     margin-right: auto;
-    /* Add this line */
 }
 
 .quote-box {
@@ -301,9 +267,6 @@ ul li.checked::before {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     font-weight: bold;
-    /* padding: 5px;
-    border: #7e76be 2px solid;
-    border-radius: 20px; */
 }
 
 #date {
@@ -316,9 +279,7 @@ ul li.checked::before {
 @media screen and (max-width: 600px) {
     .todo-box {
         max-width: 100%;
-        /* Add padding */
         margin: 10px auto;
-        /* Center the box */
     }
 
     .msg {
@@ -333,7 +294,6 @@ ul li.checked::before {
     }
 }
 
-
 .footer {
     display: flex;
     justify-content: center;
@@ -341,7 +301,6 @@ ul li.checked::before {
     width: 100%;
     max-width: 720px;
     margin: auto;
-    /* background-color: #f0f0f0; */
     color: black;
     text-align: center;
     padding: 10px 0;
