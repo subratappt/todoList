@@ -297,7 +297,6 @@ ul li.checked::before {
 }
 
 .footer {
-    position: fixed;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -306,7 +305,7 @@ ul li.checked::before {
     color: black;
     text-align: center;
     padding: 10px 0;
-    color: #ffffff9f;
+    color: #746c6c66;
 }
 #list-container.collapsed {
     display: none;
