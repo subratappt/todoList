@@ -46,9 +46,18 @@
             <ul id="completed-container"></ul>
         </div>
 
-        <div class="todo-box">
+        <!-- <div class="todo-box">
             <div class="todo-box-title">List of all tasks</div>
             <ul id="list-container"></ul>
+        </div> -->
+        <div class="todo-box">
+            <div class="todo-box-title">List of all tasks
+                <button id="toggle-list">
+                    <i id="expand-icon" class="fas fa-chevron-right"></i>
+                    <i id="collapse-icon" class="fas fa-chevron-down" style="display: none;"></i>
+                </button>
+            </div>
+            <ul id="list-container" class="collapsed"></ul>
         </div>
 
         <div class="icon-container">

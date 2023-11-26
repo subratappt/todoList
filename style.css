@@ -17,6 +17,7 @@ body {
     width: 100%;
     max-height: 100vh;
     overflow-y: auto;
+    background: transparent;
 }
 
 .todo-box {
@@ -24,7 +25,7 @@ body {
     max-width: 720px;
     background: #f0f0f0;
     margin: 20px auto 20px;
-    padding: 4px 40px 70px;
+    padding: 4px 40px 20px;
     border-radius: 15px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
@@ -255,7 +256,6 @@ ul li.checked::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
     padding: 5px;
     color: #ffffff9f;
     margin-left: auto;
@@ -267,6 +267,7 @@ ul li.checked::before {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     font-weight: bold;
+    padding-left: 10px;
 }
 
 #date {
@@ -274,6 +275,7 @@ ul li.checked::before {
     font-size: 20px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    padding-right: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -305,4 +307,18 @@ ul li.checked::before {
     text-align: center;
     padding: 10px 0;
     color: #ffffff9f;
+}
+#list-container.collapsed {
+    display: none;
+}
+
+#toggle-list {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#toggle-list:hover {
+    transform: scale(1.3);
 }

@@ -247,3 +247,19 @@ function appendListItemToContainer(listItem, tags) {
 }
 
 document.getElementById('date').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+
+document.getElementById('toggle-list').addEventListener('click', function () {
+    var listContainer = document.getElementById('list-container');
+    var expandIcon = document.getElementById('expand-icon');
+    var collapseIcon = document.getElementById('collapse-icon');
+
+    listContainer.classList.toggle('collapsed');
+
+    if (listContainer.classList.contains('collapsed')) {
+        expandIcon.style.display = 'inline-block';
+        collapseIcon.style.display = 'none';
+    } else {
+        expandIcon.style.display = 'none';
+        collapseIcon.style.display = 'inline-block';
+    }
+});
