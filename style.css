@@ -32,7 +32,7 @@ body {
 .todo-box-title {
     padding: 10px 0px 10px 0px;
     text-align: left;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -100,7 +100,7 @@ ul {
 
 ul li {
     list-style: none;
-    font-size: 24px;
+    font-size: 22px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
@@ -114,7 +114,7 @@ ul li::before {
     width: 18px;
     border-radius: 50%;
     border: 2px solid #827e7e;
-    top: 15px;
+    top: 13px;
     left: 15px;
 }
 
