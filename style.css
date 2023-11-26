@@ -297,12 +297,12 @@ ul li.checked::before {
 }
 
 .footer {
+    position: fixed;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 720px;
-    margin: auto;
     color: black;
     text-align: center;
     padding: 10px 0;
